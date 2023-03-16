@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +26,17 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // TODO: Route with middleware
+
+// TODO: kita juga dapat menggunakan middleware auth yang sudah ada,
+// TODO: Ketika belum login akan dialihkan ke page login
+// TODO: Jika sudah, boleh melanjutkan page yang dituju
+
+Route::get('/profile', function () {
+    return "Selamat Datang " . Auth::user()->name;
+    // TODO: Auth::user()->name digunakan untuk menampilkan nama user yang login
+})->middleware('auth');
+
+
 // TODO: Contoh kasus form input umur
 // TODO: Ketika umur >= 18, maka bisa melihat page /profile
 // TODO: Jika tidak, akan dikembalikan ke page input umur dengan memberikan status error
