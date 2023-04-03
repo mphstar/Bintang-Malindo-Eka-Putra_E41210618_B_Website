@@ -2,7 +2,7 @@
 ## About
 
 Nama: Bintang Malindo Eka Putra\
-NIM: E41210628
+NIM: E41210618
 
 
 
