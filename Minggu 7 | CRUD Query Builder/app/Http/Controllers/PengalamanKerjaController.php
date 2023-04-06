@@ -77,7 +77,7 @@ class PengalamanKerjaController extends Controller
 
 
         DB::table('pengalaman_kerja')
-            ->where('id', '=', $request->txt_id)
+            ->where('id', '=', $request->id)
             ->update([
                 'nama' => $request->nama,
                 'jabatan' => $request->jabatan,
