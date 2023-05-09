@@ -27,5 +27,5 @@ Route::post('/resize/proses', [UploadController::class, 'proses_resize'])->name(
 Route::get('/dropzone', [UploadController::class, 'dropzone'])->name('dropzone');
 Route::post('/dropzone/proses', [UploadController::class, 'proses_dropzone'])->name('dropzone.proses');
 
-Route::get('/pdf', [UploadController::class, 'pdf'])->name('pdf');
-Route::post('/pdf/proses', [UploadController::class, 'proses_pdf'])->name('pdf.proses');
+Route::get('/pdf_dropzone', [UploadController::class, 'pdf'])->name('pdf');
+Route::post('/pdf_dropzone/proses', [UploadController::class, 'proses_pdf'])->name('pdf.proses');
